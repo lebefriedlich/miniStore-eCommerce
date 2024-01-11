@@ -1,0 +1,96 @@
+.icon-box .icon-box-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--primary-color);
+}
+
+@media only screen and (max-width: 991px) {
+  #company-services .icon-box {
+    flex-wrap: wrap;
+  }
+}
+
+.btn-go-to-product {
+  position: absolute;
+  bottom: 20px; /* Adjust the value according to your preference */
+  right: 50%;
+}
+
+.product-store
+  .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 35px;
+}
+.swiper-pagination span.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  color: var(--light-gray-color);
+}
+.social-links svg:hover {
+  color: var(--primary-color);
+}
+.social-links li {
+  padding-right: 30px;
+}
+
+.shopify-grid select#input-sort {
+  font-size: 1.2em;
+  color: var(--dark-grey-color);
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+
+.shopify-grid select#input-sort {
+  font-size: 1.2em;
+  color: var(--dark-grey-color);
+  border: none;
+  padding: 0;
+  text-align: center;
+}
+
+/* ----------- SideBar -----------*/
+.sidebar input.search-field {
+  width: 290px;
+  height: 50px;
+  box-shadow: 5px 5px 15px 5px #eee;
+  border: 1px solid #eee;
+  padding-left: 20px;
+  outline-offset: 0;
+}
+.sidebar .search-icon {
+  padding: 14px;
+}
+.sidebar svg.search {
+  width: 20px;
+  height: 20px;
+}
+.sidebar h5.widget-title {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+.sidebar .sidebar-list li {
+  font-size: 1.2em;
+}
+.sidebar .sidebar-list li a {
+  color: var(--dark-30);
+}
+.sidebar .sidebar-list li a:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 991px) {
+  .widget-search-bar form {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1025px) {
+  .h-custom {
+    height: 100vh !important;
+  }
+}
