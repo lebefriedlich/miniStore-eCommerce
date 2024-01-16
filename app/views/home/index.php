@@ -229,7 +229,7 @@
           </div>
           <div class="icon-box-content">
             <h3 class="card-title text-uppercase text-dark">Free delivery</h3>
-            <p>Consectetur adipi elit lorem ipsum dolor sit amet.</p>
+            <p>Enjoy unlimited convenience with free shipping for every product you purchase. With no requirements or minimum purchases, we are committed to making your online shopping experience more affordable and enjoyable.</p>
           </div>
         </div>
       </div>
@@ -242,7 +242,7 @@
           </div>
           <div class="icon-box-content">
             <h3 class="card-title text-uppercase text-dark">Quality guarantee</h3>
-            <p>Dolor sit amet orem ipsu mcons ectetur adipi elit.</p>
+            <p>Every product we offer goes through strict selection to ensure the highest quality standards. We only provide the best goods that meet customer expectations.</p>
           </div>
         </div>
       </div>
@@ -255,7 +255,7 @@
           </div>
           <div class="icon-box-content">
             <h3 class="card-title text-uppercase text-dark">Daily offers</h3>
-            <p>Amet consectetur adipi elit loreme ipsum dolor sit.</p>
+            <p>Immerse yourself in a world of daily surprises as we bring you fresh, enticing offers on a wide range of products. From electronics to fashion, our Daily Offers cater to all your needs.</p>
           </div>
         </div>
       </div>
@@ -269,16 +269,15 @@
       <div class="col-lg-6 col-md-12">
         <div class="image-holder mb-4">
           <div>
-            <img src="<?= BASEURL; ?>images/single-image3.jpg" alt="single" class="single-image">
+            <img src="<?= BASEURL; ?>images/billboard.png" alt="single" class="single-image">
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-12">
         <div class="detail ps-5">
           <div class="display-header">
-            <h2 class="display-7 text-uppercase text-dark">How was Ministore Found?</h2>
-            <p class="pb-3">Risus augue curabitur diam senectus congue velit et. Sed vitae metus nibh sit era. Nulla adipiscing pharetra pellentesque maecenas odio eros at. Et libero vulputate amet duis erat volutpat vitae eget. Sed vitae metus nibh sit era. Nulla adipiscing pharetra pellentesque maecenas odio eros at. Quam libero etiam et in ac at quis. <br>
-              Sed vitae metus nibh sit era. Nulla adipiscing pharetra pellentesque maecenas odio eros at. Et libero vulputate amet duis erat volutpat vitae eget. Quam libero etiam et in ac at quis. Risus augue curabitur diam senectus congue velit et. </p>
+            <h2 class="display-7 text-uppercase text-dark mb-5">Welcome to MiniStore - A World of Toys Full of Wonder!</h2>
+            <p class="pb-3">At MiniStore, we celebrate happiness and creativity through a diverse and inspiring collection of toys. Since our founding, we have become the premier destination for toy lovers of all ages. MiniStore is committed to providing a pleasant shopping experience and giving you access to a wide variety of high-quality toys. </p>
             <a href="<?= BASEURL; ?>shop" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Our store</a>
           </div>
         </div>
@@ -327,7 +326,7 @@
           <div class="col-lg-3 col-sm-6 pb-3">
             <div class="footer-menu">
               <img src="<?= BASEURL; ?>images/main-logo.png" alt="logo">
-              <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
+              <p>A World of Toys Full of Wonder!</p>
               <div class="social-links">
                 <ul class="d-flex list-unstyled">
                   <li>

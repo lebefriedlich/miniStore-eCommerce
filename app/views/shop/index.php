@@ -272,7 +272,7 @@
           <div class="col-lg-3 col-sm-6 pb-3">
             <div class="footer-menu">
               <img src="<?= BASEURL; ?>images/main-logo.png" alt="logo">
-              <p>Nisi, purus vitae, ultrices nunc. Sit ac sit suscipit hendrerit. Gravida massa volutpat aenean odio erat nullam fringilla.</p>
+              <p>A World of Toys Full of Wonder!</p>
               <div class="social-links">
                 <ul class="d-flex list-unstyled">
                   <li>

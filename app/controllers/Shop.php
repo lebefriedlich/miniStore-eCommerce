@@ -8,7 +8,7 @@ class Shop extends Controller
         $data['pagination'] = $this->model('shop_model')->pagination();
         $data['prevPage'] = ($params > 1) ?  $params - 1 : 1;
         $data['nextPage'] = ($params > $data['pagination']) ?  $params + 1 : $data['pagination'];
-        if(isset($_SESSION['user'])){
+        if (isset($_SESSION['user'])) {
             $data['countCart'] = $this->model('home_model')->countCart($_SESSION['user']['id_user']);
         }
         $this->view('templates/header', $data);
@@ -65,17 +65,8 @@ class Shop extends Controller
             if ($this->model('shop_model')->login($_POST) > 0) {
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $this->model('shop_model')->login($_POST);
-                $role_id = $_SESSION['user']['id_role'];
-                switch ($role_id) {
-                    case 1:
-                        header('Location: ' . BASEURL . 'admin');
-                        exit();
-                    case 2:
-                        header('Location: ' . BASEURL . 'shop');
-                        exit();
-                    default:
-                        break;
-                }
+                header('Location: ' . BASEURL . 'shop');
+                exit();
             } else {
                 Flasher::setFlash('Your username or password is incorrect. ', 'please try again', 'danger');
                 header('Location: ' . BASEURL . 'shop');

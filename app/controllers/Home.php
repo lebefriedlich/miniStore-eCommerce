@@ -50,17 +50,8 @@ class Home extends Controller
             if ($this->model('home_model')->login($_POST) > 0) {
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $this->model('home_model')->login($_POST);
-                $role_id = $_SESSION['user']['id_role'];
-                switch ($role_id) {
-                    case 1:
-                        header('Location: ' . BASEURL . 'admin');
-                        exit();
-                    case 2:
-                        header('Location: ' . BASEURL . 'home');
-                        exit();
-                    default:
-                        break;
-                }
+                header('Location: ' . BASEURL . 'home');
+                exit();
             } else {
                 Flasher::setFlash('Your username or password is incorrect. ', 'please try again', 'danger');
                 header('Location: ' . BASEURL . 'home');

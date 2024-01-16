@@ -6,7 +6,7 @@ class SingleProduct extends Controller
     {
         $data['judul'] = 'Product';
         $data['product'] = $this->model('singleProduct_model')->getAllProductById($params);
-        if(isset($_SESSION['user'])){
+        if (isset($_SESSION['user'])) {
             $data['countCart'] = $this->model('home_model')->countCart($_SESSION['user']['id_user']);
         }
         $this->view('templates/header', $data);
@@ -51,17 +51,8 @@ class SingleProduct extends Controller
             if ($this->model('singleProduct_model')->login($_POST) > 0) {
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $this->model('singleProduct_model')->login($_POST);
-                $role_id = $_SESSION['user']['id_role'];
-                switch ($role_id) {
-                    case 1:
-                        header('Location: ' . BASEURL . 'admin');
-                        exit();
-                    case 2:
-                        header('Location: ' . BASEURL . 'singleProduct/index/' . $params);
-                        exit();
-                    default:
-                        break;
-                }
+                header('Location: ' . BASEURL . 'singleProduct/index/' . $params);
+                exit();
             } else {
                 Flasher::setFlash('Your username or password is incorrect. ', 'please try again', 'danger');
                 header('Location: ' . BASEURL . 'singleProduct/index/' . $params);
@@ -97,6 +88,5 @@ class SingleProduct extends Controller
             header('Location: ' . BASEURL . 'singleProduct/index/' . $params);
             exit;
         }
-
     }
 }
