@@ -32,3 +32,9 @@
    Akun 4
    - Email: vijay22@gmail.com
    - Password: jay922
+
+## Kontribusi
+Kontribusi selalu dipersilakan! Jika Anda ingin meningkatkan proyek ini, silakan buka *issue* untuk mendiskusikan perubahan yang ingin Anda usulkan atau kirimkan *pull request*.
+
+## Lisensi
+Proyek ini dilisensikan di bawah Lisensi MIT. Silakan lihat [LICENSE](LICENSE) untuk detail lebih lanjut.
