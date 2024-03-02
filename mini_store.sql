@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 11, 2024 at 04:31 PM
+-- Generation Time: Jan 17, 2024 at 01:58 AM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -41,7 +41,9 @@ CREATE TABLE `carts` (
 
 INSERT INTO `carts` (`id_cart`, `id_user`, `id_product`, `qty`, `price`) VALUES
 (11, 3, 3, 3, 60000),
-(13, 3, 2, 4, 80000);
+(13, 3, 2, 4, 80000),
+(14, 8, 6, 3, 375000),
+(15, 8, 10, 1, 1350000);
 
 -- --------------------------------------------------------
 
@@ -64,7 +66,7 @@ CREATE TABLE `checkouts` (
 --
 
 INSERT INTO `checkouts` (`id_checkout`, `id_user`, `checkout_date`, `name`, `phone`, `address`, `total_price`) VALUES
-(1, 2, '2024-01-06 07:04:46', 'Maulana Haekal Noval Akbar', '081359654483', 'Dsn. Tugusari RT/RW 02/14 Ds. Kepulungan Kec. Gempol Kab. Pasuruan Prov. Jawa Timur', 170000),
+(1, 8, '2024-01-06 07:04:46', 'Maulana Haekal Noval Akbar', '081359654483', 'Dsn. Tugusari RT/RW 02/14 Ds. Kepulungan Kec. Gempol Kab. Pasuruan Prov. Jawa Timur', 170000),
 (2, 3, '2024-01-06 07:09:45', 'Almira Tasya Nabila', '081359654482', 'Mojokerto', 3500000);
 
 -- --------------------------------------------------------
@@ -144,7 +146,7 @@ INSERT INTO `products` (`id_product`, `name_product`, `description`, `image`, `p
 (15, 'Mainan Anak Minion Bob\n', 'Mainan Minion Bob adalah mainan yang menggemaskan dan cocok untuk anak-anak berusia 2 tahun ke atas. \nMainan ini memiliki bentuk Minion Bob yang ikonik dengan warna kuning cerah. Minion Bob memiliki tubuh yang gemuk dan kaki yang pendek. Mainan ini dapat dijadikan sebagai teman tidur anak\n', 'minion-bob.jpg', 150000, 197, 'Mainan anak, Minion, Bob', 'minions'),
 (16, 'Mainan Anak Mobil Kebakaran Paw Patrol Rescue Mars', 'Mainan Mobil Pemadam Kebakaran Paw Patrol Rescue Marshall memiliki bentuk mobil pemadam kebakaran berwarna merah putih. Mobil ini memiliki fitur sirene dan lampu yang dapat dinyalakan. Terdapat action figure mini Karakter Marshall. \nMainan ini cocok untuk anak-anak berusia 3 tahun ke atas. Mainan ini dapat digunakan untuk bermain peran, bermain bersama teman-teman, atau untuk dijadikan sebagai koleksi.\n', 'paw-patrol.jpg', 150000, 160, 'Mainan Mobil, Pemadam Kebakaran, Paw Patrol', 'Paw Patrol'),
 (17, 'Mainan Cashier Toy Cash Register Playset', 'Mainan Cashier Toy Cash Register Playset adalah mainan yang populer di kalangan anak-anak. Mainan ini didasarkan pada kasir supermarket yang sesungguhnya. Mainan ini dapat digunakan untuk bermain peran, bermain bersama teman-teman, atau untuk dijadikan sebagai koleksi.\nMainan ini cocok untuk anak-anak usia tiga tahun ke atas. \n', 'Cashier-Toy.jpg', 200000, 200, 'Mainan, Cashier Toy', 'CifToys'),
-(18, 'Mainan Magic Mixies Magical ', 'Mainan ini memiliki bentuk kuali ajaib berwarna ungu dan putih. Kuali ini memiliki fitur penyemprotan uap yang dapat digunakan untuk membuat ramuan ajaib. Mainan ini juga dilengkapi dengan boneka plush yang dapat berinteraksi dengan pengguna.\n', 'Magic-Mixies.jpg', 650000, 150, 'Mainan, Magic Mixies', 'Magic Mixies');
+(20, 'Mainan Magic Mixies Magical', 'Mainan ini memiliki bentuk kuali ajaib berwarna ungu dan putih. Kuali ini memiliki fitur penyemprotan uap yang dapat digunakan untuk membuat ramuan ajaib. Mainan ini juga dilengkapi dengan boneka plush yang dapat berinteraksi dengan pengguna.', 'Magic-Mixies.jpg', 700000, 150, 'Mainan, Magic Mixies', 'Magic Mixies');
 
 -- --------------------------------------------------------
 
@@ -184,12 +186,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `name_user`, `email`, `pass`, `id_role`) VALUES
-(1, 'Maulana Haekal', 'maulanahaekal@gmail.com', '$2y$10$gE0AWHEpCaitmnqBbuhPEuQIQ3cuKZ6gGtSgUuCsYkGf2ZWMLKm1i', 1),
-(3, 'Almira Tasya', 'tasyuu789@gmail.com', '$2y$10$Curi/eFj6t2tWIC3H8oHzOiC7VBsSzpZsO3Q2Taxsb7XSYWmlpJB2', 2),
-(7, 'Tasya Nabila', 'tasyuu@gmail.com', '$2y$10$zsniRdUHBAXouKU1BoyoO.2v4MquAwZCAVYMl5Qwt16ZfdP0F3AZ2', 1),
-(8, 'Noval Akbar', 'noval.akbar.906@gmail.com', '$2y$10$CFrSNTCf.D3HAln9oeC/meyxEPxYOXDMpENSY2qxzqEfz6b/Bipsi', 2),
-(9, 'Sholihatul Mir\'ati', 'sholiha@gmail.com', '$2y$10$xhYnz2pTPh6M6pTCGwkzOuiY1sfVRtVVAio83SR9ABefk3d3QhYOa', 2),
-(10, 'Nasihatul Munir', 'munirhaen@gmail.com', '$2y$10$SOJLXgoMR0Pzmz0VqbVtXueOAdlilMsYJL9KGL/qUOkaZvGZNFsU.', 1);
+(1, 'Maulana Haekal', 'maulanahaekal@gmail.com', '$2y$10$VjvVHGMZyHXKT9KZQNINge/TSB1It.h4EBuPoP.NWULCnuHH/cA86', 1),
+(3, 'Almira Tasya', 'tasyuu789@gmail.com', '$2y$10$q2lw6oxRhuA3YKw3WdG7IOhqxndhaOiOimIh/hEEY1HKQUqP3KsPq', 2),
+(7, 'Tasya Nabila', 'tasyuu@gmail.com', '$2y$10$4cGlv9IxVWsB7PTrtBEOie2BT/msIvTs6opEMMkZC/5uyorS0JLlm', 1),
+(8, 'Noval Akbar', 'noval.akbar.906@gmail.com', '$2y$10$ijDHvjLvJZRH2fwWEmypDO2N8FuimVMYe/o5EUtXGmbeFFrK6jI.q', 2),
+(9, 'Sholihatul Mir\'ati', 'sholiha@gmail.com', '$2y$10$nFshXJOm9CQxuAofR0zes.4/wJiZdCnVLBTTfRw.1LWLxvavcU/uq', 2),
+(10, 'Nasihatul Munir', 'munirhaen@gmail.com', '$2y$10$mprb2vr4glQc.SnoYys8HeCSvLhL7jP8.0ETzjbq32UkwIJu1Ajaq', 1),
+(12, 'Vijaydillah', 'vijay22@gmail.com', '$2y$10$vabvp6Etw.2FlmaIpZSd0u6rxAvlLPW5uipHAcif9IS/eouAkLBQC', 2);
 
 --
 -- Indexes for dumped tables
@@ -245,7 +248,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_cart` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `checkouts`
@@ -263,7 +266,7 @@ ALTER TABLE `checkout_items`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `roles`
@@ -275,7 +278,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables
