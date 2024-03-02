@@ -58,7 +58,6 @@ class Database
         try {
             return $this->stmt->execute();
         } catch (PDOException $e) {
-            // Log the error or handle it more gracefully
             die($e->getMessage());
         }
     }
